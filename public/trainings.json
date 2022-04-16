@@ -1,0 +1,24 @@
+[
+    {
+       "id":1,
+       "training": "Spin Kicks",
+       "fee": 30,
+       "duration": 14,
+       "description": "In this two week training session, you will learn about fancy and powerful kicks like 360,540,720,Spining Back Kick,Spining Hook Kick,etc,With Shifu IP.",
+       "image": "https://img.freepik.com/free-photo/confident-korean-man-kimono-practicing-handtohand-combat-martial-arts_155003-33532.jpg?t=st=1650145036~exp=1650145636~hmac=434eae4a371cb1e10b1da3f64a49c59736925d59d80eb1c1e1450a585ccce8db&w=826"
+    },
+    { "id":2,
+       "training": "Boxing Booster",
+       "fee": 16,
+       "duration": 7,
+       "description": "Boxing Booster trainging will increse your speed,agility,accuracy and form in Wing-Chun Boxing.Shifu IP will help you to get the best out of this course with is techniques.",
+       "image": "https://img.freepik.com/free-photo/close-up-hand-with-bandage-muscular-man-training-kickboxing-black_155003-16799.jpg?t=st=1650150835~exp=1650151435~hmac=3b1f0bc6d8805dea1273a8b822692d93d7b67465f3c411c452a5d87b0c4371f1&w=826"
+    },
+    { "id":3,
+       "training": "Esclate Endurance",
+       "fee": 8,
+       "duration": 4,
+       "description": "Endurance is most important thing for a fighter.In This Traing Shifu IP will teach you about endurance boosting traning.This training is for beginners and intermediate learners.",
+       "image": "https://img.freepik.com/free-photo/outdoor-shot-active-dark-skinned-man-running-morning-has-regular-trainings-dressed-tracksuit-comfortable-sneakers-concentrated-into-distance-sees-finish-far-away_273609-29401.jpg?t=st=1650151050~exp=1650151650~hmac=d128f7fede3b68f199bd9e910999c16769d5fb550d1502979905fc3f2d560ab8&w=826"
+    }
+ ]
