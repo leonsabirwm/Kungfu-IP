@@ -4,16 +4,17 @@ import About from './Components/About/About';
 import Blogs from './Components/Blogs/Blogs';
 import Checkout from './Components/Checkout/Checkout';
 import Footer from './Components/Footer/Footer';
-import NavBar from './Components/Header/Header';
+import Header from './Components/Header/Header';
 import Login from './Components/Login/Login';
 import Main from './Components/Main/Main';
+import NotFound from './Components/NotFound/NotFound';
 import RequireAuth from './Components/RequireAuth/RequireAuth';
 import Signup from './Components/Signup/Signup';
 
 function App() {
   return (
     <div className="App bg-black">
-    <NavBar></NavBar>
+    <Header></Header>
     <Routes>
       <Route path='/'element={<Main></Main>}></Route>
       <Route path='/about'element={<About></About>}></Route>
@@ -25,6 +26,7 @@ function App() {
       }></Route>
       <Route path='/login'element={<Login></Login>}></Route>
       <Route path='/signup' element={<Signup></Signup>}></Route>
+      <Route path='*' element={<NotFound></NotFound>}></Route>
     </Routes>
     <Footer></Footer>
     </div>

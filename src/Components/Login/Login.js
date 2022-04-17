@@ -28,7 +28,6 @@ const Login = () => {
     }
     const handlePasswordInput = (event)=>{
         setUserInfo({...userInfo,password:event.target.value})
-        console.log(userInfo.password);
     }
     const handleFormSubmit = (event) => {
         event.preventDefault();

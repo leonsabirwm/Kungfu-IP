@@ -6,7 +6,7 @@ const Checkout = () => {
         <div className='text-white'>
            <div className='checkout-form'>
               <div>
-              <h4 className=''>Peronsal Info</h4>
+              <h4 className=''>Personal Info</h4>
                <input className='border-0 outline-0 w-25 mb-4' type="text" placeholder='Your Name' />
                <br />
                <input className='border-0 outline-0 w-25 mb-4' type="text" placeholder='You Phone' />
