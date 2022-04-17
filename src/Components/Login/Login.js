@@ -44,7 +44,6 @@ const Login = () => {
         }
     },[user,googleUser])
     const handleGoogleSignIn = () =>{
-        console.log('hi there')
         signInWithGoogle();
     }
     return (
