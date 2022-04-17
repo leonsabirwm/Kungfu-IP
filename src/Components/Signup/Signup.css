@@ -1,0 +1,8 @@
+.signup-form{
+    padding: 160px 0 70px 0;
+}
+.signup-form input{
+outline: 0;
+height: 40px;
+min-width: 220px;
+}

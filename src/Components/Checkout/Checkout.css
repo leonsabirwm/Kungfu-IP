@@ -1,0 +1,14 @@
+.checkout-form{
+    padding-top: 90px;
+}
+.checkout-form input{
+    outline: 0;
+    height: 5vh;
+}
+.billing-address input{
+    outline: 0;
+    height: 5vh;
+}
+.checkout-form button{
+    outline: 0;
+}

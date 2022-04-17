@@ -1,7 +1,9 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Training.css'
 
 const Training = ({training}) => {
+    const navigate = useNavigate();
     return (
         <div className='col-4 training-card d-flex flex-column p-0'>
             <div className=''>
@@ -13,7 +15,7 @@ const Training = ({training}) => {
                 <h5>Duration : {training.duration} Days</h5>
                 <p className='text-start mt-3'>{training.description}</p>
             </div>
-                <button className=' border-0 outline-none w-100 p-2 checkout-btn'>Check Out</button>
+                <button onClick={()=>navigate('/checkout')} className='border-0 outline-none w-100 p-2 checkout-btn'>Check Out</button>
             
             
         </div>
