@@ -18,7 +18,7 @@ This is my tenth assignment for Programming Hero Web Course Batch-5.This is a Re
 * React Router (v-6.3.0)
 * React Social Icon
 
-## Live Site - [Lucid Review]( https://kungfu-ip.web.app/)
+## Live Site - [Kung Fu IP]( https://kungfu-ip.web.app/)
 
  https://kungfu-ip.web.app/
 
