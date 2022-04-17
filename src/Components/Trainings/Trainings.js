@@ -6,7 +6,7 @@ import Training from '../Training/Training';
 const Trainings = () => {
     const [trainings,setTrainings] = useTrainings();
     return (
-        <div className='container bg-black text-white'>
+        <div className='container bg-black text-white' id='trainings'>
             <h1>Personal Training Sessions</h1>
             <div className='row'>
             {
