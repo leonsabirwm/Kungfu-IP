@@ -1,12 +1,14 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Form, Nav } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './Signup.css'
 import googleImg from '../../../src/images/google-logo.png'
 import auth from '../../firebase.init';
 import { useCreateUserWithEmailAndPassword, useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import toast, { Toaster } from 'react-hot-toast';
 
 const Signup = () => {
+    const navigate = useNavigate();
     const [signInWithGoogle,googleuser,googleloading,googleerror] = useSignInWithGoogle(auth);
     const [
         createUserWithEmailAndPassword,
@@ -48,7 +50,7 @@ const Signup = () => {
             setInputError({...inputError,passwordError:''});
         }
         else{
-            setInputError({...inputError,passwordError:'Password must contain at least six character.'})
+            setInputError({...inputError,passwordError:'Password must contain at least eight character.'})
             setUserInfo({...userInfo,password:''})
             console.log(userInfo.password);
         }
@@ -62,10 +64,19 @@ const Signup = () => {
         console.log('hi there')
         signInWithGoogle();
     }
-    if(user){
-        console.log(user);
-    }
+    useEffect(()=>{
+        if(user || googleuser){
+
+            toast.success('User Created!');
+            setTimeout(() => {
+                
+                navigate('/');
+            }, 2000);
+        }
+    },[user,googleuser])
     return (
+        <>
+        <Toaster />
         <div className='signup-form text-white d-flex flex-column align-items-center'>
         <Form onSubmit={handleFormSubmit}>
             <div className='d-flex flex-column align-items-start'>
@@ -93,6 +104,7 @@ const Signup = () => {
                    </button>
                </div>
     </div>
+    </>
     );
 };
 

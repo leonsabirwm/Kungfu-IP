@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Form, Nav } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { SocialIcon } from 'react-social-icons';
 import './Login.css'
 import googleImg from '../../../src/images/google-logo.png'
@@ -8,6 +8,10 @@ import auth from '../../firebase.init';
 import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 
 const Login = () => {
+    const navigate = useNavigate();
+    const location = useLocation();
+    const from = location.state?.from?.pathname || '/';
+
     const [signInWithGoogle,googleUser,googleLoading,googleError] = useSignInWithGoogle(auth);
     const [
         signInWithEmailAndPassword,
@@ -34,9 +38,11 @@ const Login = () => {
    if(error){
        console.log(error)
    }
-    if(user){
-        console.log(user);
-    }
+    useEffect(()=>{
+        if(user || googleUser){
+            navigate(from);
+        }
+    },[user,googleUser])
     const handleGoogleSignIn = () =>{
         console.log('hi there')
         signInWithGoogle();
