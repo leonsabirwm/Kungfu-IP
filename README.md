@@ -1,7 +1,7 @@
 
 # Kung Fu IP
 
-This is my tenth assignment for Programming Hero Web Course Batch-5.This is a React based Firebase authentication and hosting focused project.
+This is my tenth assignment for Programming Hero Web Course Batch-5.This is a React based,Firebase authentication and hosting focused project.
 
 * This is a single page application (SPA) for an independent martial art master.
 * Authentication based route or private route is intergrated in checkout process of any wished to enroll training.Only authenticated user can access that
