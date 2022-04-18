@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Form, Nav } from 'react-bootstrap';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { SocialIcon } from 'react-social-icons';
 import './Login.css'
 import googleImg from '../../../src/images/google-logo.png'
 import auth from '../../firebase.init';
@@ -15,7 +14,7 @@ const Login = () => {
     const [sendPasswordResetEmail, sending,reError] = useSendPasswordResetEmail(
         auth
       );
-    const [signInWithGoogle,googleUser,googleLoading,googleError] = useSignInWithGoogle(auth);
+    const [signInWithGoogle,googleUser] = useSignInWithGoogle(auth);
     const [
         signInWithEmailAndPassword,
         user,
@@ -65,7 +64,7 @@ const Login = () => {
 
         }
         
-    },[reError])
+    },[reError,sending])
     useEffect(()=>{
         if(sending){
 

@@ -1,9 +1,17 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { CheckoutContext } from '../../App';
 import './Training.css'
 
 const Training = ({training}) => {
+    const [checkItem,setCheckItem] = useContext(CheckoutContext);
     const navigate = useNavigate();
+    const itemArr = [];
+    const handleCheckOut = ()=>{
+        itemArr.push(training);
+        setCheckItem(itemArr);
+        navigate(`/checkout/${training.id}`);
+    }
     return (
         <div className='col-lg-4 col-12 training-card d-flex flex-column p-0'>
             <div className=''>
@@ -15,7 +23,7 @@ const Training = ({training}) => {
                 <h5 className='text-nowrap'>Duration : {training.duration} Days</h5>
                 <p className='text-start mt-3'>{training.description}</p>
             </div>
-                <button onClick={()=>navigate('/checkout')} className='border-0 outline-none w-100 p-2 bg-danger checkout-btn'>Check Out</button>
+                <button onClick={handleCheckOut} className='border-0 outline-none w-100 p-2 bg-danger checkout-btn'>Check Out</button>
             
             
         </div>

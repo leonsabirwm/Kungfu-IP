@@ -1,3 +1,4 @@
+import { createContext, useContext, useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import About from './Components/About/About';
@@ -11,15 +12,20 @@ import NotFound from './Components/NotFound/NotFound';
 import RequireAuth from './Components/RequireAuth/RequireAuth';
 import Signup from './Components/Signup/Signup';
 
+export const CheckoutContext = createContext();
+
 function App() {
+  const [checkItem,setCheckItem] = useState([]);
+  
   return (
-    <div className="App bg-black">
+   <CheckoutContext.Provider value={[checkItem,setCheckItem]}>
+      <div className="App bg-black">
     <Header></Header>
     <Routes>
       <Route path='/'element={<Main></Main>}></Route>
       <Route path='/about'element={<About></About>}></Route>
       <Route path='/blogs' element={<Blogs></Blogs>}></Route>
-      <Route path='/checkout' element={
+      <Route path='/checkout/:trainingId' element={
         <RequireAuth>
           <Checkout></Checkout>
         </RequireAuth>
@@ -30,6 +36,7 @@ function App() {
     </Routes>
     <Footer></Footer>
     </div>
+   </CheckoutContext.Provider>
   );
 }
 

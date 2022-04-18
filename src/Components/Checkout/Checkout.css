@@ -4,10 +4,13 @@
 .checkout-form input{
     outline: 0;
     height: 5vh;
+    min-width: 250px;
 }
 .billing-address input{
     outline: 0;
     height: 5vh;
+    min-width: 250px;
+
 }
 .checkout-form button{
     outline: 0;

@@ -18,7 +18,7 @@ const Subscribe = () => {
                </div>
                <div className='subs-input-container'>
                    <input className='subs-input' type="text" placeholder='Your Email Please' />
-                   <button className='border-0 bg-danger px-2 py-2 text-white'>Subscribe</button>
+                   <button className='border-0 bg-danger px-2 py-2 text-white mt-3'>Subscribe</button>
                </div>
             </div>
             
