@@ -53,14 +53,16 @@ const Login = () => {
     }
     useEffect(()=>{
         if(reError){
-
-            toast.error('Email not found.',{id:133})
+            setTimeout(() => {
+                
+                toast.error('Email not found.',{id:133})
+            }, 2000);
         }
         if(!reError && sending){
          
-         setTimeout(()=>{
-            toast.success('Password reset mail sent.');
-        },1500)   
+         
+            toast.success('Sending password reset email.',{id:632,icon:'🚀'});
+          
 
         }
         
@@ -114,7 +116,7 @@ const Login = () => {
       },
     },
     success: {
-      duration: 2000,
+      duration: 3000,
       theme: {
         primary: 'green',
         secondary: 'black',
@@ -142,12 +144,15 @@ const Login = () => {
 
                 </div>
             </Form>
-            <div className='d-flex align-items-center justify-content-center me-5 ms-3'>
+            <div className='d-flex flex-column align-items-center justify-content-center me-5 ms-3'>
                <div className='d-flex'>
                <p className=''>Forgot Password ?</p>
                <p><button className='text-danger fs-6 border-0 bg-black' onClick={handlePasswordReset}>Reset Password</button></p>
                </div>
-               <p className='text-danger'>{resetError}</p>
+               
+              <div>
+              <p className='text-danger'>{resetError}</p>
+              </div>
                </div>
            <p className='me-5'>--------------  OR  --------------</p>
 
