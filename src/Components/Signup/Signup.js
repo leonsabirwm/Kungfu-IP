@@ -103,7 +103,7 @@ const Signup = () => {
             </div>
         </Form>
            <div>
-                   <button onClick={handleGoogleSignIn} className='bg-success border-0 px-3 py-2 text-white mb-3 me-5 ms-1'>
+                   <button onClick={handleGoogleSignIn} className='bg-success border-0 px-3 py-2 text-white mb-3 me-5'>
                 
                     <img width={30} src={googleImg} alt="" />   Continue With Google
                    </button>

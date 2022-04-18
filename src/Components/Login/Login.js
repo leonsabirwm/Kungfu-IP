@@ -142,15 +142,17 @@ const Login = () => {
 
                 </div>
             </Form>
-            <div className='d-flex align-items-center justify-content-center'>
+            <div className='d-flex align-items-center justify-content-center me-5 ms-3'>
+               <div className='d-flex'>
                <p className=''>Forgot Password ?</p>
                <p><button className='text-danger fs-6 border-0 bg-black' onClick={handlePasswordReset}>Reset Password</button></p>
                </div>
                <p className='text-danger'>{resetError}</p>
-           <p>--------------  OR  --------------</p>
+               </div>
+           <p className='me-5'>--------------  OR  --------------</p>
 
                <div>
-                   <button onClick={handleGoogleSignIn} className='bg-success border-0 px-3 py-2 text-white mb-3 me-4'>
+                   <button onClick={handleGoogleSignIn} className='bg-success border-0 px-3 py-2 text-white mb-3 me-5 '>
                 
                     <img width={30} src={googleImg} alt="" />   Continue With Google
                    </button>
