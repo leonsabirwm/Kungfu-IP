@@ -1,0 +1,19 @@
+.subscribe-newsletter{
+    text-align: justify;
+}
+.subs-input{
+    outline: 0;
+height: 40px;
+min-width: 220px;
+}
+.subs-input-container{
+    text-align: left;
+}
+@media screen and (max-width: 576px) {
+    .subs-title{
+        font-size: 20px;
+    }
+    .subscribe-newsletter{
+        font-size: 14px;
+    }
+  }
