@@ -60,7 +60,7 @@ const Login = () => {
         if(!reError && sending){
          
          setTimeout(()=>{
-            toast.success('Email Sent');
+            toast.success('Password reset mail sent.');
         },1500)   
 
         }
