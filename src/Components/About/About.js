@@ -9,7 +9,7 @@ const About = () => {
                <h1 className='fs-1 text-nowrap'>Leon Sabir</h1>
                </div>
            <div className='col-lg-6 col-12'>
-               <p className='about-paragraph'>To me goals are like variables.As we grow and learn our goals keep changing.I also had some goals which now may seems worthless but at some point those were meaningful.Anaway as of now I am fousing on Web Development and I want to identify myself as a full-stack web developer.I know I am lazy and insecure about my worth and all,I know what I have to do to get rid from all of that and I am trying to set them up.And am I really trying?</p>
+               <p className='about-paragraph'>To me goals are like variables.As we grow and learn our goals keep changing.I also had some goals which now may seems worthless but at some point those were meaningful.Anyway as of now I am fousing on Web Development and I want to identify myself as a full-stack web developer.I know I have some insecurities about myself and all but I am trying to get rid of that but I need to try more harder.Wishing myself adventurous coding journey.</p>
            </div>
         </div>
     );

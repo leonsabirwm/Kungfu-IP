@@ -20,5 +20,26 @@
        "duration": 4,
        "description": "Endurance is most important thing for a fighter.In This Traing Shifu IP will teach you about endurance boosting traning.This training is for beginners and intermediate learners.",
        "image": "https://img.freepik.com/free-photo/outdoor-shot-active-dark-skinned-man-running-morning-has-regular-trainings-dressed-tracksuit-comfortable-sneakers-concentrated-into-distance-sees-finish-far-away_273609-29401.jpg?t=st=1650151050~exp=1650151650~hmac=d128f7fede3b68f199bd9e910999c16769d5fb550d1502979905fc3f2d560ab8&w=826"
+    },
+    { "id":4,
+       "training": "Dummy Basics",
+       "fee": 12,
+       "duration": 7,
+       "description": "Dummy traing enhances your punching and bocking ability to another level.Practicing puches and blocks on wodden dummy you techniques gets more solid.For,that first of all you 've to know the right way to train with wooden dummy.",
+       "image": "https://news.cgtn.com/news/2020-08-10/Wing-Chun-One-of-the-traditional-southern-fists-styles-SQbuIGa0Ok/img/aa3f5f067881409691e60cb6e94b775c/aa3f5f067881409691e60cb6e94b775c.png"
+    },
+    { "id":5,
+       "training": "Wing-Chun Basics",
+       "fee": 60,
+       "duration": 20,
+       "description": "If you take any martial art,at initial phase you need to master the basics of that art.On this session Master Ip will teach you the fundamental of Wing-Chun.",
+       "image": "https://wayofmartialarts.com/wp-content/uploads/2020/07/kung-fu-2198043_1920-1-1024x576.jpg"
+    },
+    { "id":6,
+       "training": "Bo-Staff Special",
+       "fee": 12,
+       "duration": 7,
+       "description": "Playing with bo staff is a fancy art or skill.Any one will appreciate your skill of bo staff and you will be able to take down bad guys with spining moves.",
+       "image": "https://i.pinimg.com/originals/34/f9/56/34f956e2ec4f0d7c9b12ebb682c00c3d.jpg"
     }
  ]

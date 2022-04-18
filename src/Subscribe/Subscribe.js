@@ -10,7 +10,7 @@ const Subscribe = () => {
             </div>
             <div className='col-lg-6 col-12 d-flex flex-column align-items-left justify-content-center text-white'>
                 <div className="d-flex flex-row">
-                <h2 className='text-nowrap subs-title'>Sign Up.Explore Kung Fu.Be Confident.</h2>
+                <h2 className='text-nowrap subs-title'>Sign Up.Explore Kung Fu.Prove Yourself.</h2>
                
                 </div>
                <div>

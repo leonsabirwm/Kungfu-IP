@@ -4,12 +4,14 @@ import { Link, useNavigate } from 'react-router-dom';
 import './Signup.css'
 import googleImg from '../../../src/images/google-logo.png'
 import auth from '../../firebase.init';
-import { useCreateUserWithEmailAndPassword, useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import { useCreateUserWithEmailAndPassword, useSignInWithEmailAndPassword, useSignInWithGoogle, useUpdateProfile } from 'react-firebase-hooks/auth';
 import toast, { Toaster } from 'react-hot-toast';
+import { async } from '@firebase/util';
 
 const Signup = () => {
     const navigate = useNavigate();
     const [signInWithGoogle,googleuser,googleloading,googleerror] = useSignInWithGoogle(auth);
+    const [updateProfile] = useUpdateProfile(auth);
     const [
         createUserWithEmailAndPassword,
         user,
@@ -17,6 +19,7 @@ const Signup = () => {
         error,
       ] = useCreateUserWithEmailAndPassword(auth,{sendEmailVerification : true});
     const [userInfo,setUserInfo] = useState({
+        name:'',
         email:'',
         password:''
     });
@@ -24,13 +27,14 @@ const Signup = () => {
         emailError:'',
         passwordError:''
     })
+    const handleNameInput = (event) =>{
+        setUserInfo({...userInfo,name:event.target.value});
+    }
     const handleEmailInput = (event)=>{
-        console.log(event.target.value)
         const emailRegEx = /\S+@\S+\.\S+/;
         const valid = emailRegEx.test(event.target.value);
         
         if(valid){
-            console.log('valid email')
             setUserInfo({...userInfo,email:event.target.value});
             setInputError({...inputError,emailError:''});
         }
@@ -55,10 +59,10 @@ const Signup = () => {
             console.log(userInfo.password);
         }
     }
-    const handleFormSubmit = (event) => {
+    const handleFormSubmit = async (event) => {
         event.preventDefault();
-        createUserWithEmailAndPassword(userInfo.email,userInfo.password);
-
+       await createUserWithEmailAndPassword(userInfo.email,userInfo.password);
+       await updateProfile({ displayName : userInfo.name });
     }
     const handleGoogleSignIn = () =>{
         console.log('hi there')
@@ -66,7 +70,6 @@ const Signup = () => {
     }
     useEffect(()=>{
         if(user || googleuser){
-
             toast.success('User Created!');
             setTimeout(() => {
                 
@@ -82,6 +85,8 @@ const Signup = () => {
             <div className='d-flex flex-column align-items-start'>
                 <h4 className='d-inline-block'>Please Sign Up</h4>
                 <br />
+            <input onBlur={handleNameInput} className='border-0 outline-0 w-25 mb-2' name='name' type="text" placeholder='Your Name' required />
+            <br />
             <input onBlur={handleEmailInput} className='border-0 outline-0 w-25 mb-2' name='email' type="text" placeholder='Your Email' required />
             <br />
             <p className='text-danger mb-3'>{inputError.emailError}</p>
